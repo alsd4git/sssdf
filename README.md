@@ -3,6 +3,8 @@ Some Simple Stupid DockerFiles I'll use for testing
 
 I mainly work on windows (my bad) so these commands here are tested on powershell7, they may be sligtly different on bash
 
+[IMAGE_TAG] is the name of the image you will create/launch ecc. you can name wathere you want, i suggest folder name but you do
+
 # To Build: 
 (inside folder dedicated)
 ```bash
