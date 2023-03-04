@@ -3,6 +3,6 @@ FROM php:7.1.33
 # Install Composer
 COPY --from=composer:2.2 /usr/bin/composer /usr/local/bin/composer
 
-# To Build: docker build --pull --rm -f "DockerFile" -t php8.2.0-composer:latest "."
-# To Run: docker run --rm -v ${PWD}:/app -w /app php8.2.0-composer:latest command here
-# To launch a shell inside the container: docker run -i -t --rm -v ${PWD}:/app -w /app php8.2.0-composer:latest /bin/bash
+# To Build: docker build --pull --rm -f "DockerFile" -t php7.1.33-composer:latest "."
+# To Run: docker run --rm -v ${PWD}:/app -w /app php7.1.33-composer:latest command here
+# To launch a shell inside the container: docker run -i -t --rm -v ${PWD}:/app -w /app php7.1.33-composer:latest /bin/bash

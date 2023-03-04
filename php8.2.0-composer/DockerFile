@@ -6,4 +6,4 @@ COPY --from=composer:2.5 /usr/bin/composer /usr/local/bin/composer
 # To Build: docker build --pull --rm -f "DockerFile" -t php8.2.0-composer:latest "."
 # To Run: docker run --rm -v ${PWD}:/app -w /app php8.2.0-composer:latest command here
 # To launch a shell inside the container binding port 8000: docker run -i -t --rm -p 8000:8000 -v ${PWD}:/app -w /app php8.2.0-composer:latest /bin/bash
-# To serve only without having a shell after: docker run -i -t --rm -p 8000:8000 -v ${PWD}:/app -w /app php8.2.0-composer:latest /bin/bash -c "php artisan serve --host 0.0.0.0"
+# To serve only without having a shell after (php/artisan/laravel): docker run -i -t --rm -p 8000:8000 -v ${PWD}:/app -w /app php8.2.0-composer:latest /bin/bash -c "php artisan serve --host 0.0.0.0"
