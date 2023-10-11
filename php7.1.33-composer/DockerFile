@@ -1,4 +1,4 @@
-FROM php:7.1.33
+FROM php:7.1.33-alpine
 
 # Install Composer
 COPY --from=composer:2.2 /usr/bin/composer /usr/local/bin/composer
