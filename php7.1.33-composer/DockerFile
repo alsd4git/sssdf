@@ -3,6 +3,11 @@ FROM php:7.1.33-alpine
 # Install Composer
 COPY --from=composer:2.2 /usr/bin/composer /usr/local/bin/composer
 
+# Install Bash
+RUN apk add --no-cache bash
+
 # To Build: docker build --pull --rm -f "DockerFile" -t php7.1.33-composer:latest "."
 # To Run: docker run --rm -v ${PWD}:/app -w /app php7.1.33-composer:latest command here
 # To launch a shell inside the container: docker run -i -t --rm -v ${PWD}:/app -w /app php7.1.33-composer:latest /bin/bash
+# To launch a shell inside the container binding port 8000: docker run -i -t --rm -p 8000:8000 -v ${PWD}:/app -w /app php7.1.33-composer:latest /bin/bash
+# To serve only without having a shell after (php/artisan/laravel): docker run -i -t --rm -p 8000:8000 -v ${PWD}:/app -w /app php7.1.33-composer:latest /bin/bash -c "php artisan serve --host 0.0.0.0"
